@@ -22,7 +22,16 @@
         <activity android:name=".Linear_Layout" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Relative_Layout" />
-        <activity android:name=".TableLayout"></activity>
+        <activity android:name=".TableLayout" />
+        <activity android:name=".FrameLayout" />
+        <activity android:name=".AbsoluteLayout" />
+        <activity android:name=".ScrollViewLayout" />
+        <activity android:name=".ScrollViewVertical" />
+        <activity android:name=".ScrollViewHorizontal" />
+        <activity android:name=".ContactForm" />
+        <activity android:name=".IconAndTextButton" />
+        <activity android:name=".MateriLayout" />
+        <activity android:name=".MaterialDesign"/>
     </application>
 
 </manifest>

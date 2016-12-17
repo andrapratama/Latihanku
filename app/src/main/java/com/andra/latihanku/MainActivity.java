@@ -5,70 +5,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6;
+    Button btnLayout, btnMD;
+    RelativeLayout introMessage;
+    LinearLayout appContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = (Button)findViewById(R.id.button1);
-        btn2 = (Button)findViewById(R.id.button2);
-        btn3 = (Button)findViewById(R.id.button3);
-        btn4 = (Button)findViewById(R.id.button4);
-        btn5 = (Button)findViewById(R.id.button5);
-        btn6 = (Button)findViewById(R.id.button6);
+        introMessage = (RelativeLayout) findViewById(R.id.welcome_pesan);
+        appContent = (LinearLayout) findViewById(R.id.content_layout);
+        btnLayout = (Button)findViewById(R.id.button1);
+        btnMD = (Button)findViewById(R.id.button2);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Fill_Parent_Wrap_Content_Activity.class);
+                Intent intent = new Intent(MainActivity.this, MateriLayout.class);
                 startActivity(intent);
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btnMD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Linear_Layout.class);
+                Intent intent = new Intent(MainActivity.this, MaterialDesign.class);
                 startActivity(intent);
             }
         });
+    }
 
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Relative_Layout.class);
-                startActivity(intent);
-            }
-        });
-
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TableLayout.class);
-                startActivity(intent);
-            }
-        });
-
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Linear_Layout.class);
-                startActivity(intent);
-            }
-        });
-
-        btn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Linear_Layout.class);
-                startActivity(intent);
-            }
-        });
-
+    public void dismisWelcomeMessageBox(View view) {
+        introMessage.setVisibility(View.INVISIBLE);
+        appContent.setVisibility(View.VISIBLE);
     }
 }

@@ -4,92 +4,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button1"
-            android:text="Fill Parant and Wrap Content"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button2"
-            android:text="Linear Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            <RelativeLayout
+                android:id="@+id/welcome_pesan"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#1565c0"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:visibility="visible">
 
-        <Button
-            android:id="@+id/button3"
-            android:text="Relative Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <TextView
+                    android:id="@+id/welcome_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Selamat datang di aplikasi Andraid"
+                    android:textColor="#ddd"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button4"
-            android:text="Table Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <TextView
+                    android:id="@+id/welcome_messgae"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome_title"
+                    android:text="Aplikasi ini dibuat dari kumpulan tutorial pada website Okedroid.com sebagai bahan pembelajaran saya"
+                    android:textColor="#ddd"
+                    android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/button5"
-            android:text="Frame Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="bottom"
+                    android:background="#fff"
+                    android:onClick="dismisWelcomeMessageBox"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="Oke"
+                    android:textColor="#1565c0" />
+            </RelativeLayout>
 
-        <Button
-            android:id="@+id/button6"
-            android:text="Absolute Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="invisible">
 
-        <Button
-            android:id="@+id/button7"
-            android:text="ScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <Button
+                    android:id="@+id/button1"
+                    android:text="Materi Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
-        <Button
-            android:id="@+id/button8"
-            android:text="Custom ScrollView Vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <Button
+                    android:id="@+id/button2"
+                    android:text="Material Design"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
-        <Button
-            android:id="@+id/button9"
-            android:text="Custom ScrollView Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
 
-        <Button
-            android:id="@+id/button10"
-            android:text="Penerapan Contact Form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-        <Button
-            android:id="@+id/button11"
-            android:text="Icon and Text Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-    </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
 </ScrollView>
